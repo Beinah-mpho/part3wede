@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enquire about tutoring services at Intellectual Enrichment Centre.">
+    <meta name="keywords" content="tutoring enquiry, Cape Town tutoring">
+    <title>Enquiry | Intellectual Enrichment Centre</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="image-container">
+            <img src="images/logo iec.png" alt="Intellectual Enrichment Centre Logo">
+        </div>
+        <div>
+            <button><a href="index.html" class="nav-link">Home</a></button>
+            <button><a href="aboutus.html" class="nav-link">About Us</a></button>
+            <button><a href="contact.html" class="nav-link">Contact Us</a></button>
+            <button><a href="services.html" class="nav-link">Services</a></button>
+            <button><a href="news.html" class="nav-link">News</a></button>
+            <button><a href="enquiry.html" class="nav-link active">Enquiry</a></button>
+        </div>
+    </nav>
+    <div class="content-box">
+        <h1>Enquiry Form</h1>
+        <form id="enquiryForm" action="https://formsubmit.co/mphow-enquiry@site.com" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <label for="service">Enquiry Type:</label>
+            <select id="service" name="service" required>
+                <option value="">Select Type</option>
+                <option value="tutoring">Tutoring Services</option>
+                <option value="matric">Matric Rewrite</option>
+                <option value="sponsor">Sponsor a Student</option>
+            </select>
+            <label for="subjects">Subjects Interested In:</label>
+            <textarea id="subjects" name="subjects" placeholder="List subjects" required></textarea>
+            <input type="hidden" name="_next" value="https://beinah-mpho.github.io/rcstationaries/enquiry.html">
+            <input type="submit" value="Submit Enquiry">
+        </form>
+        <div id="enquiryResponse"></div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

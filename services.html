@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutoring services for Grade 8-12 in Mathematics, Physical Science, and more at Intellectual Enrichment Centre.">
+    <meta name="keywords" content="tutoring Cape Town, matric rewrite, online classes, contact classes">
+    <title>Tutoring Services | Intellectual Enrichment Centre</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="image-container">
+            <img src="images/logo iec.png" alt="Intellectual Enrichment Centre Logo">
+        </div>
+        <div>
+            <button><a href="index.html" class="nav-link">Home</a></button>
+            <button><a href="aboutus.html" class="nav-link">About Us</a></button>
+            <button><a href="contact.html" class="nav-link">Contact Us</a></button>
+            <button><a href="services.html" class="nav-link active">Services</a></button>
+            <button><a href="news.html" class="nav-link">News</a></button>
+            <button><a href="enquiry.html" class="nav-link">Enquiry</a></button>
+        </div>
+    </nav>
+    <div class="content-box">
+        <h1>Our Tutoring Services</h1>
+        <p>At Intellectual Enrichment Centre, we provide high-quality tutoring to help learners excel.</p>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Mathematics & Mathematics Literacy</button>
+                <div class="accordion-content">
+                    <p>Comprehensive tutoring for problem-solving and exam preparation.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Physical Science</button>
+                <div class="accordion-content">
+                    <p>Hands-on learning for physics and chemistry concepts.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Geography</button>
+                <div class="accordion-content">
+                    <p>Map skills and environmental studies for all grades.</p>
+                </div>
+            </div>
+        </div>
+        <h2>Flexible Learning Options</h2>
+        <p>Online Classes: Monday to Sunday.<br>Contact Classes: Friday to Sunday.</p>
+        <p><a href="enquiry.html">Enroll today!</a></p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.accordion-header').click(function() {
+                $(this).next('.accordion-content').slideToggle(300);
+                $(this).parent().toggleClass('active');
+                $('.accordion-content').not($(this).next()).slideUp(300);
+                $('.accordion-item').not($(this).parent()).removeClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
